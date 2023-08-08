@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: read
-  issues: write
   pull-requests: write
 
 jobs:
@@ -14,8 +13,12 @@ jobs:
     if: github.event.pull_request.merged && !contains(github.event.pull_request.labels.*.name, 'Released') && !contains(github.event.pull_request.labels.*.name, 'Prerelease')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-ecosystem/action-add-labels@v1
-        id: released-label
+      - uses: actions/github-script@v6
         with:
-            github_token: "${{ secrets.GITHUB_TOKEN }}"
-            labels: 'Released'
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.payload.pull_request.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ['Released']
+            })
