@@ -4,4 +4,4 @@
 # Linguist overrides
 *yml linguist-detectable=true
 *yaml linguist-detectable=true
-/.github linguist-vendored=false
+(^|/)\.github/ linguist-vendored=false
