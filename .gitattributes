@@ -2,6 +2,7 @@
 * text=auto
 
 # Linguist overrides
-*yml linguist-detectable=true
-*yaml linguist-detectable=true
-(^|/)\.github/ linguist-vendored=false
+* linguist-detectable=true
+* linguist-vendored=false
+
+*md linguist-documentation=false
