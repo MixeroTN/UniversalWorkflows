@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Linguist overrides
+* linguist-detectable=true
+* linguist-documentation=false
+* linguist-vendored=false
