@@ -3,6 +3,9 @@
 
 # Linguist overrides
 * linguist-detectable=true
+* linguist-documentation=false
 * linguist-vendored=false
 
-*md linguist-documentation=false
+*.git* linguist-vendored=true
+
+README.md linguist-documentation=true
