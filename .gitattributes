@@ -2,5 +2,5 @@
 * text=auto
 
 # Linguist overrides
-**/* linguist-detectable=true
-**/* linguist-vendored=false
+*/* linguist-detectable=true
+*/* linguist-vendored=false
