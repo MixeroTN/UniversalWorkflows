@@ -13,7 +13,7 @@ jobs:
     if: github.event.pull_request.merged && !contains(github.event.pull_request.labels.*.name, 'Released') && !contains(github.event.pull_request.labels.*.name, 'Prerelease')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v6
+      - uses: actions/github-script@v7
         with:
           script: |
             github.rest.issues.addLabels({
